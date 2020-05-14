@@ -27,6 +27,12 @@
 - Then: 价值加一，触发上限，变为50
 
 --------
+### Sulfuras
+- Given: 商品类型，价值10
+- When: 过了一天
+- Then: 价值不变
+
+--------
 ### Aged Brie
 - Given: 过期天数10，价值3
 - When: 过了一天
@@ -51,12 +57,7 @@
 - Then: 价值加一，触发上限，变为50
 
 --------
-### Sulfuras
-- Given: 商品类型，价值10
-- When: 过了一天
-- Then: 价值不变
 
---------
 ### Backstage pass
 - Given: 过期天数12，价值3
 - When: 过了一天

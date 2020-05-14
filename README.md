@@ -2,6 +2,9 @@
 
 ![Java CI with Gradle](https://github.com/nalansitan/tdd-gilded-rose/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=GildedRoseAdvance)
 
+## CI
+[Github Actions](https://github.com/nalansitan/tdd-gilded-rose/actions)
+
 ## 开发环境
  - JDK1.8+
  

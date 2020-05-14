@@ -35,4 +35,11 @@ public class GildeRoseTest {
         Assert.assertEquals(50,gr.getQuality());
         Assert.assertEquals(9,gr.getSellIn());
     }
+
+    @Test
+    public void should_return_10_when_given_sulfuras_quality_10(){
+        GildeRose gr = new GildeRose(10, GildeRose.GOODSTYPES.Sulfuras);
+        gr.oneMoreDay();
+        Assert.assertEquals(10,gr.getQuality());
+    }
 }
