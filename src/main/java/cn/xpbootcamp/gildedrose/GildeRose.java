@@ -19,6 +19,10 @@ public class GildeRose {
 
     public void oneMoreDay() {
         this.SellIn -= 1;
-        this.Quality += 1;
+        if (this.SellIn < 0){
+            this.Quality -= 2;
+        }else{
+            this.Quality += 1;
+        }
     }
 }
