@@ -55,6 +55,15 @@ public class GildeRose {
                 }
                 break;
             case BackstagePass:
+                this.SellIn -= 1;
+                if (this.SellIn < 0){
+                    this.Quality = 0;
+                }else if (this.SellIn <=10){
+                    this.Quality += 2;
+                }else {
+                    this.Quality += 1;
+                }
+                break;
             case Normal:
             default:
                 this.SellIn -= 1;
