@@ -1,12 +1,16 @@
 package cn.xpbootcamp.gildedrose;
 
+import static cn.xpbootcamp.gildedrose.GildeRose.GOODSTYPES.Normal;
+
 public class GildeRose {
     private int SellIn;
     private int Quality;
     public enum GOODSTYPES{
-        Sulfuras, Normal
+        Sulfuras,
+        Normal,
+        AgedBrie;
     }
-    public GOODSTYPES GoodsTypes = GOODSTYPES.Normal;
+    public GOODSTYPES GoodsTypes = Normal;
 
     public GildeRose(int SellIn, int Quality) {
         this.Quality = Quality;
@@ -15,6 +19,12 @@ public class GildeRose {
 
     public GildeRose(int Quality, GOODSTYPES GoodsTypes) {
         this.Quality = Quality;
+        this.GoodsTypes = GoodsTypes;
+    }
+
+    public GildeRose(int SellIn, int Quality, GOODSTYPES GoodsTypes) {
+        this.Quality = Quality;
+        this.SellIn = SellIn;
         this.GoodsTypes = GoodsTypes;
     }
 
@@ -35,6 +45,7 @@ public class GildeRose {
         switch(this.GoodsTypes) {
             case Sulfuras:
                 break;
+            case AgedBrie:
             case Normal:
             default:
                 this.SellIn -= 1;

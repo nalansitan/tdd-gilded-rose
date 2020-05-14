@@ -42,4 +42,12 @@ public class GildeRoseTest {
         gr.oneMoreDay();
         Assert.assertEquals(10,gr.getQuality());
     }
+
+    @Test
+    public void should_return_4_when_given_sellin_10_quality_3_good_type_aged_brie(){
+        GildeRose gr = new GildeRose(10,3, GildeRose.GOODSTYPES.AgedBrie);
+        gr.oneMoreDay();
+        Assert.assertEquals(4,gr.getQuality());
+        Assert.assertEquals(9,gr.getSellIn());
+    }
 }
