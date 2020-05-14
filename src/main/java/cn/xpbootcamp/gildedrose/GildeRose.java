@@ -8,7 +8,8 @@ public class GildeRose {
     public enum GOODSTYPES{
         Sulfuras,
         Normal,
-        AgedBrie;
+        AgedBrie,
+        BackstagePass;
     }
     public GOODSTYPES GoodsTypes = Normal;
 
@@ -53,6 +54,7 @@ public class GildeRose {
                     this.Quality += 1;
                 }
                 break;
+            case BackstagePass:
             case Normal:
             default:
                 this.SellIn -= 1;

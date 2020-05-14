@@ -74,4 +74,12 @@ public class GildeRoseTest {
         Assert.assertEquals(50,gr.getQuality());
         Assert.assertEquals(9,gr.getSellIn());
     }
+
+    @Test
+    public void should_return_4_when_given_sellin_12_quality_3_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(12,3, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(4,gr.getQuality());
+        Assert.assertEquals(11,gr.getSellIn());
+    }
 }
