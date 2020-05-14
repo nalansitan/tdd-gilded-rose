@@ -50,4 +50,12 @@ public class GildeRoseTest {
         Assert.assertEquals(4,gr.getQuality());
         Assert.assertEquals(9,gr.getSellIn());
     }
+
+    @Test
+    public void should_return_5_when_given_sellin_0_quality_3_good_type_aged_brie(){
+        GildeRose gr = new GildeRose(0,3, GildeRose.GOODSTYPES.AgedBrie);
+        gr.oneMoreDay();
+        Assert.assertEquals(5,gr.getQuality());
+        Assert.assertEquals(-1,gr.getSellIn());
+    }
 }

@@ -46,6 +46,13 @@ public class GildeRose {
             case Sulfuras:
                 break;
             case AgedBrie:
+                this.SellIn -= 1;
+                if (this.SellIn < 0){
+                    this.Quality += 2;
+                }else{
+                    this.Quality += 1;
+                }
+                break;
             case Normal:
             default:
                 this.SellIn -= 1;
