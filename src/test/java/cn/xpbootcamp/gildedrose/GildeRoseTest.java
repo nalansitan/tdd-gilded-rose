@@ -19,4 +19,12 @@ public class GildeRoseTest {
         Assert.assertEquals(1,gr.getQuality());
         Assert.assertEquals(-1,gr.getSellIn());
     }
+
+    @Test
+    public void should_return_0_when_given_sellin_0_quality_1(){
+        GildeRose gr = new GildeRose(0,1);
+        gr.oneMoreDay();
+        Assert.assertEquals(0,gr.getQuality());
+        Assert.assertEquals(-1,gr.getSellIn());
+    }
 }

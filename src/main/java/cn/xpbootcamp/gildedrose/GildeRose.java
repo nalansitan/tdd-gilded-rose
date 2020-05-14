@@ -10,6 +10,9 @@ public class GildeRose {
     private int Quality;
 
     public int getQuality() {
+        if (this.Quality < 0){
+            this.Quality = 0;
+        }
         return this.Quality;
     }
 
