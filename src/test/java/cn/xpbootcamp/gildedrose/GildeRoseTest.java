@@ -98,4 +98,20 @@ public class GildeRoseTest {
         Assert.assertEquals(6,gr.getQuality());
         Assert.assertEquals(3,gr.getSellIn());
     }
+
+    @Test
+    public void should_return_0_when_given_sellin_0_quality_3_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(0,3, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(0,gr.getQuality());
+        Assert.assertEquals(-1,gr.getSellIn());
+    }
+
+    @Test
+    public void should_return_50_when_given_sellin_3_quality_49_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(3,49, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(50,gr.getQuality());
+        Assert.assertEquals(2,gr.getSellIn());
+    }
 }
