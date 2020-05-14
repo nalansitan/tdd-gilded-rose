@@ -12,6 +12,8 @@ public class GildeRose {
     public int getQuality() {
         if (this.Quality < 0){
             this.Quality = 0;
+        }else if (this.Quality > 50){
+            this.Quality = 50;
         }
         return this.Quality;
     }
