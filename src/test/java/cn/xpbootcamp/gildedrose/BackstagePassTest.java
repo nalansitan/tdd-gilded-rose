@@ -5,42 +5,74 @@ import org.junit.Test;
 
 public class BackstagePassTest {
     @Test
-    public void should_return_4_when_given_sellin_12_quality_3_good_type_backstage_pass(){
-        GildeRose gr = new GildeRose(12,3, GildeRose.GOODSTYPES.BackstagePass);
+    public void should_return_21_when_given_sellin_15_quality_20_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(15,20, GildeRose.GOODSTYPES.BackstagePass);
         gr.oneMoreDay();
-        Assert.assertEquals(4,gr.getQuality());
-        Assert.assertEquals(11,gr.getSellIn());
+        Assert.assertEquals(21,gr.getQuality());
+        Assert.assertEquals(14,gr.getSellIn());
     }
 
     @Test
-    public void should_return_5_when_given_sellin_9_quality_3_good_type_backstage_pass(){
-        GildeRose gr = new GildeRose(9,3, GildeRose.GOODSTYPES.BackstagePass);
+    public void should_return_47_when_given_sellin_10_quality_45_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(10,45, GildeRose.GOODSTYPES.BackstagePass);
         gr.oneMoreDay();
-        Assert.assertEquals(5,gr.getQuality());
+        Assert.assertEquals(47,gr.getQuality());
+        Assert.assertEquals(9,gr.getSellIn());
+    }
+
+    @Test
+    public void should_return_47_when_given_sellin_9_quality_45_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(9,45, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(47,gr.getQuality());
         Assert.assertEquals(8,gr.getSellIn());
     }
 
     @Test
-    public void should_return_6_when_given_sellin_4_quality_3_good_type_backstage_pass(){
-        GildeRose gr = new GildeRose(4,3, GildeRose.GOODSTYPES.BackstagePass);
+    public void should_return_50_when_given_sellin_10_quality_49_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(10,49, GildeRose.GOODSTYPES.BackstagePass);
         gr.oneMoreDay();
-        Assert.assertEquals(6,gr.getQuality());
-        Assert.assertEquals(3,gr.getSellIn());
+        Assert.assertEquals(50,gr.getQuality());
+        Assert.assertEquals(9,gr.getSellIn());
     }
 
     @Test
-    public void should_return_0_when_given_sellin_0_quality_3_good_type_backstage_pass(){
-        GildeRose gr = new GildeRose(0,3, GildeRose.GOODSTYPES.BackstagePass);
+    public void should_return_50_when_given_sellin_10_quality_50_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(10,50, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(50,gr.getQuality());
+        Assert.assertEquals(9,gr.getSellIn());
+    }
+
+    @Test
+    public void should_return_50_when_given_sellin_5_quality_49_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(5,49, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(50,gr.getQuality());
+        Assert.assertEquals(4,gr.getSellIn());
+    }
+
+    @Test
+    public void should_return_48_when_given_sellin_5_quality_45_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(5,45, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(48,gr.getQuality());
+        Assert.assertEquals(4,gr.getSellIn());
+    }
+
+    @Test
+    public void should_return_23_when_given_sellin_1_quality_20_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(1,20, GildeRose.GOODSTYPES.BackstagePass);
+        gr.oneMoreDay();
+        Assert.assertEquals(23,gr.getQuality());
+        Assert.assertEquals(0,gr.getSellIn());
+    }
+
+    @Test
+    public void should_return_0_when_given_sellin_0_quality_20_good_type_backstage_pass(){
+        GildeRose gr = new GildeRose(0,20, GildeRose.GOODSTYPES.BackstagePass);
         gr.oneMoreDay();
         Assert.assertEquals(0,gr.getQuality());
         Assert.assertEquals(-1,gr.getSellIn());
-    }
-
-    @Test
-    public void should_return_50_when_given_sellin_3_quality_49_good_type_backstage_pass(){
-        GildeRose gr = new GildeRose(3,49, GildeRose.GOODSTYPES.BackstagePass);
-        gr.oneMoreDay();
-        Assert.assertEquals(50,gr.getQuality());
-        Assert.assertEquals(2,gr.getSellIn());
     }
 }
