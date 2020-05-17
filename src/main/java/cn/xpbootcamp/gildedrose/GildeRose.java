@@ -20,11 +20,6 @@ public class GildeRose {
         this.SellIn = SellIn;
     }
 
-    public GildeRose(int Quality, GOODSTYPES GoodsTypes) {
-        this.Quality = Quality;
-        this.GoodsTypes = GoodsTypes;
-    }
-
     public GildeRose(int SellIn, int Quality, GOODSTYPES GoodsTypes) {
         this.Quality = Quality;
         this.SellIn = SellIn;
